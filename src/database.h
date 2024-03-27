@@ -26,10 +26,6 @@ struct Database {
 	Type type;
 	void *value;
 
-
-
-
-
 };
 
 // 엔트리를 생성한다.

@@ -1,15 +1,24 @@
-//============================================================================
-// Name        : Database.cpp
-// Author      : wjdvlf5456
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
+#include <string>
+
+#include "database.h"
+
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	cout << "!!!Hello World!!!" << endl;
+
+	class Database(){
+
+	}
+
+
+
+
+
+	
+	
+	
+	
 	return 0;
 }
