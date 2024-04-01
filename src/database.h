@@ -3,33 +3,34 @@
 
 #include <string>
 
-using namespace std;
-
-enum Type {
-	INT, DOUBLE, STRING, ARRAY
-};
+enum Type { INT, DOUBLE, STRING, ARRAY };
 
 struct Array {
-	int size;
-	Type type;
-	void *items;
+  int size;
+  Type type;
+  void *items;
 };
 
 struct Entry {
-	Type type;
-	string key;
-	void *value;
+  Type type;
+  std::string key;
+  void *value;
 };
 
 struct Database {
-	string key;
-	Type type;
-	void *value;
+  // 해당 부분만 수정하여 사용한다.
+  // 다른 부분은 수정하면 안됨.
+
+
+
+
+
+
 
 };
 
 // 엔트리를 생성한다.
-Entry* create(Type type, string key, void *value);
+Entry *create(Type type, std::string key, void *value);
 
 // 데이터베이스를 초기화한다.
 void init(Database &database);
@@ -38,10 +39,10 @@ void init(Database &database);
 void add(Database &database, Entry *entry);
 
 // 데이터베이스에서 키에 해당하는 엔트리를 찾는다.
-Entry get(Database &database, string &key);
+Entry *get(Database &database, std::string &key);
 
 // 데이터베이스에서 키에 해당하는 엔트리를 제거한다.
-void remove(Database &database, string &key);
+void remove(Database &database, std::string &key);
 
 // 데이터베이스를 해제한다.
 void destroy(Database &database);
