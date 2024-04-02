@@ -8,21 +8,26 @@
 
 using namespace std;
 
-//Entry *create(Type type,string key, void *value){
-//
-//
-//
-//
-//}
+Entry *create(Type type, string key, void *value) {
+    Entry *newEntry = new Entry; // 새 Entry 객체 동적 할당
+    newEntry->type = type; // type 설정
+    newEntry->key = key; // key 설정
+    newEntry->value = value; // value 설정
+    return newEntry; // 새 Entry 객체 포인터 반환
+}
 
-
+/*
+void init(Database &database) {
+    // 데이터베이스 초기화 작업을 수행하는 코드를 여기에 작성하세요.
+    // 예: database 변수의 초기화, 메모리 할당 등
+}
+*/
 
 
 int main() {
 
     Database db;
-    init(db);
-
+    //init(db);
 
 
     bool flag = false;
@@ -34,12 +39,13 @@ int main() {
 
     struct Entry entry;
     string key;
+    string value;
 
 	cout << "command (list, add, get, del, exit): ";
 
 	while(true){
 	    cin >> command;
-	    flag = false;
+	    flag = true;
         if(command=="list"){
             cout << "list" << endl;
 
@@ -47,41 +53,41 @@ int main() {
             cout << "key: ";
             cin >> key;
 
-
-
             cout << "type (int, double, string, array): ";
             cin >> typeString;
 
             if(typeString == "int"){
                 type = INT;
                 // 지역변수 선언
-
                 cout << "int";
 
             }else if(typeString == "double"){
                 type = DOUBLE;
                 cout << "double";
 
-                cout << type;
-
             }else if(typeString == "string"){
                 type = STRING;
                 cout << "string";
-
-                cout << type;
-            //entry *create = (type,key,1);
-
-
 
             }else if(typeString == "array"){
                 type = ARRAY;
                 cout << "array";
 
-                cout << type;
-
             }else{
                 cout << "invalid command";
+                flag = false;
+                continue;
+            };
+
+            if(flag==true){
+                cout << "value: ";
+                cin >> value;
+
             }
+
+            //create(type,key,value);   실패한 코드 / create 함수 호출 시에 value가 어떤 데이터 타입인지 알 수 없기에 오류 발생
+            create(type,key,&value);
+
 
 
 
