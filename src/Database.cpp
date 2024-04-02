@@ -35,7 +35,7 @@ int main() {
 
         }else if(command=="exit"){
             cout << "exit" << endl;
-            exit(0);    // 프로그램 종료 / exit(1); 은 강제종료
+            exit(0);                            // 프로그램 종료, exit(1); 은 강제종료
 
         }else{
             cout << "invalid command" << endl;
@@ -43,10 +43,16 @@ int main() {
 
         }
 
+        string key;
+
         if(flag == true){
 
         } else{
-        cout << "key: " << endl;
+        cout << "key: ";
+        cin >> key;
+
+
+
         cout << "type (int, double, string, array): " << endl;
 
         }
