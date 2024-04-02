@@ -9,6 +9,7 @@ struct Array {
   int size;
   Type type;
   void *items;
+
 };
 
 struct Entry {
@@ -20,22 +21,13 @@ struct Entry {
 struct Database {
   // 해당 부분만 수정하여 사용한다.
   // 다른 부분은 수정하면 안됨.
-    
-
-
-
-
-
-
-
-
-
 
 
 };
 
 // 엔트리를 생성한다.
 Entry *create(Type type, std::string key, void *value);
+// *value는 int형 주소값 선언으로 활용
 
 // 데이터베이스를 초기화한다.
 void init(Database &database);
